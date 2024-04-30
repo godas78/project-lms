@@ -6,7 +6,7 @@ import pages.*;
 
 public class PageObjectManager<ProgramDelPage> {
 	
-	private static final String ProgramdelPage = null;
+	//private static final String ProgramdelPage = null;
 	private WebDriver driver;
 	private HomePage homePage;
 	private LoginPage loginPage;
@@ -14,6 +14,7 @@ public class PageObjectManager<ProgramDelPage> {
 	private ProgramMdelPage programMdelPage;
 	private ProgramNavPage programnavPage;
 	private ProgramsortPage programsortpage;
+	private ProgramPagiPage programpagiPage;
 		
 	public PageObjectManager(WebDriver driver) 
 	{
@@ -46,11 +47,15 @@ public class PageObjectManager<ProgramDelPage> {
 	{
 		return (programnavPage == null) ? programnavPage = new ProgramNavPage(driver) : programnavPage;
 	}
+	
 	public ProgramsortPage getProgramsortPage()
 	{
 		return (programsortpage == null) ? programsortpage = new ProgramsortPage(driver) : programsortpage;
 	}
-	
+	public ProgramPagiPage getProgramPagiPage()
+	{
+		return (programpagiPage == null) ? programpagiPage = new ProgramPagiPage(driver) : programpagiPage;
+	}
 	
 }
 	
