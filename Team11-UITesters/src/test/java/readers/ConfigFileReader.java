@@ -11,6 +11,8 @@ import enums.BrowserType;
 public class ConfigFileReader {
 
 	private static Properties properties;
+	public static Object getPassword;
+	public static Object getUserName;
 	private final String propertyFilePath = "src/test/resources/configs/Configuration.properties";
 
 	public ConfigFileReader() 
@@ -75,7 +77,7 @@ public class ConfigFileReader {
 
 	public String getHomePageUrl() 
 	{
-		String url = properties.getProperty("homePageUrl");
+		String url = properties.getProperty("loginPageUrl");
 		if (url != null)
 			return url;
 		else
@@ -200,31 +202,31 @@ public class ConfigFileReader {
 			throw new RuntimeException("screenshotPath not specified in the Configuration.properties file.");
 	}
 
-	/*public String getDSAlgoUserName() {
-		String username = properties.getProperty("dsAlgoUserName");
+	/*public String getUserName() {
+		String username = properties.getProperty("UserName");
 		if (username != null)
 			return username;
 		else
-			throw new RuntimeException("dsAlgoUserName not specified in the Configuration.properties file.");
+			throw new RuntimeException("UserName not specified in the Configuration.properties file.");
 	}
 
-	public String getDSAlgoPassword() {
-		String password = properties.getProperty("dsAlgoPassword");
+	public String getPassword() {
+		String password = properties.getProperty("Password");
 		if (password != null)
 			return password;
 		else
-			throw new RuntimeException("dsAlgoPassword not specified in the Configuration.properties file.");
+			throw new RuntimeException("Password not specified in the Configuration.properties file.");
 	}
 
 	public String getValidLoginMsg() {
-		String msg = properties.getProperty("validLoginMsg");
+		String msg = properties.getProperty("loginsuccess");
 		if (msg != null)
 			return msg;
 		else
 			throw new RuntimeException("validLoginMsg not specified in the Configuration.properties file.");
 	}
 
-	public String getInvalidLoginMsg() {
+	/*public String getInvalidLoginMsg() {
 		String msg = properties.getProperty("invalidLoginMsg");
 		if (msg != null)
 			return msg;
@@ -239,9 +241,9 @@ public class ConfigFileReader {
 			return msg;
 		else
 			throw new RuntimeException("logOutSuccessMsg not specified in the Configuration.properties file.");
-	}
+	}*/
 
-	public String getLoginBtnText() {
+	/*public String getLoginBtnText() {
 		String text = properties.getProperty("loginBtnText");
 		if (text != null)
 			return text;
@@ -249,7 +251,7 @@ public class ConfigFileReader {
 			throw new RuntimeException("loginBtnText not specified in the Configuration.properties file.");
 	}
 
-	public String getTreeHeading() {
+	/*public String getTreeHeading() {
 		String heading = properties.getProperty("treeHeading");
 		if (heading != null)
 			return heading;

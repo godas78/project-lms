@@ -34,10 +34,10 @@ public class ProgramsortSD {
 		}
 
 	@When("user clicks the sort icon of program name column ascending")
-	public void user_clicks_the_sort_icon_of_program_name_column_ascending() throws InterruptedException {
+	public void user_clicks_the_sort_icon_of_program_name_column_ascending() {
 		Log.info("User is clicking sort ascending");
 		programsortpage.clickprogramnameA();
-		Thread.sleep(3000);
+		
 	}
 
 	@Then("The data get sorted on the table based on the program name column values in ascending order")

@@ -16,3 +16,13 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
+
+Feature: Login
+Background: The user is logged in to LMS application
+    Given Navigate to appUrl
+     
+	Scenario: Login
+     Given user is on appUrl
+     When The user enter valid credentials        
+     And Click on Login button
+     Then user is on Manage Program page

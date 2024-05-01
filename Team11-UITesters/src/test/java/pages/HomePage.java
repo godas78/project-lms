@@ -14,7 +14,8 @@ public class HomePage {
 
 	WebDriver driver;
 	
-	@FindBy(xpath = "//a[@href='/login']") WebElement loginBtn;
+	@FindBy(xpath = "//button[@id='login") WebElement loginBtn;
+	@FindBy(xpath = "") WebElement logout;
 		
 	public HomePage(WebDriver driver)
 	{
@@ -39,13 +40,7 @@ public class HomePage {
 	{
 		Assert.assertEquals(loginBtn.getText(), FileReaderManager.getInstance().getConfigReader().getLoginBtnText());
 		Log.info("Verifies that user is not logged in");
-	}
-	
-	public void VerifySignedIn()
-	{
-		Assert.assertEquals(signedInUser.getText().toLowerCase(), FileReaderManager.getInstance().getConfigReader().getDSAlgoUserName());
-		Log.info("Verifies that user is logged in");
-	}
+	}*/
 	
 	public void ClickOnSignIn()
 	{
@@ -53,7 +48,7 @@ public class HomePage {
 		Log.info("User clicked on Sign in");
 	}
 	
-	public void ClickOnRegister() {
+	/*public void ClickOnRegister() {
 		registerBtn.click();
 	}
 	
